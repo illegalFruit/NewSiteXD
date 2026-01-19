@@ -1,31 +1,32 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>The bread is delicious</title>
-        <link rel="icon" type="image/x-icon" href="./bread.ico">
+        <link rel="icon" type="image/x-icon" href="./img/bread.ico">
         <style>
             @font-face {
                 font-family: 'clearsans-regular';
-                src: url('./clear-sans/ClearSans-Regular.ttf');
+                src: url('./font/clear-sans/ClearSans-Regular.ttf');
             }
             @font-face {
                 font-family: 'clearsans-italic';
-                src: url('./clear-sans/ClearSans-Italic.ttf');
+                src: url('./font/clear-sans/ClearSans-Italic.ttf');
             }
             @font-face {
                 font-family: 'clearsans-bold';
-                src: url('./clear-sans/ClearSans-Bold.ttf');
+                src: url('./font/clear-sans/ClearSans-Bold.ttf');
             }
             @font-face {
                 font-family: 'clearsans-bolditalic';
-                src: url('./clear-sans/ClearSans-BoldItalic.ttf');
+                src: url('./font/clear-sans/ClearSans-BoldItalic.ttf');
             }
             @font-face {
                 font-family: 'clearsans-light';
-                src: url('./clear-sans/ClearSans-Light.ttf');
+                src: url('./font/clear-sans/ClearSans-Light.ttf');
             }
             @font-face {
                 font-family: 'clearsans-thin';
-                src: url('./clear-sans/ClearSans-Thin.ttf');
+                src: url('./font/clear-sans/ClearSans-Thin.ttf');
             }           
             body{
                 background-color: linen;
@@ -51,13 +52,20 @@
                 color: linen;
                 -webkit-text-stroke: 1px red;
             }
-            ol{
-                margin-left: 16px;
+            .date{
                 margin-top: 8px;
+                -webkit-text-stroke: 1px rgb(255, 132, 132);
+                font-size: 16px;
+                color: linen;
+                margin: 4px;
             }
             a {
                 color: blue;
                 -webkit-text-stroke: 0px red;
+                text-decoration: none;
+                margin-left: 30px;
+                font-size: 30px;
+                margin-right: auto
             }
             a:visited{
                 color: rgb(120, 148, 240);
@@ -68,7 +76,7 @@
             }
             .vbox{
                 display: flex;
-                flex-direction: column;
+                flex-direction: column; 
             }
             .hbox{
                 display: flex;
@@ -84,11 +92,12 @@
                 top: -180px;
             }
             .title{
-                font-size: 38px;
+                font-size: 42px;
                 font-family: 'clearsans-thin';
                 text-decoration: none;
                 color: red;
                 position: relative;
+                margin-left: 0px;
             }
             .title:visited{
                 text-decoration: none;
@@ -102,28 +111,43 @@
                 text-decoration: none;
                 font-family: 'clearsans-thin';
             }
+            .entry{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(255, 236, 210);
+                justify-content: flex-start;
+            }
+            .plain{
+                background-color: transparent;
+            }
+            .tag{
+                font-family: 'clearsans-thin';
+                font-size: 16px;
+                margin: 4px;
+                padding: 2px;
+                color: rgb(10, 3, 3);
+            }
         </style>
     </head>
     <body class="center">
         <div class="vbox">
             <div class="hbox spacer">
-                <a href="home.html" class="title">Home</a>
+                <a href="home" class="title">Home</a>
                 <div class="updated">last updated today</div>
             </div>
             <div class="content vbox">
-                <ol reversed>
-                    <li><a class='unavailable' href="#">2025 Recap</a></li>
-                    <li><a class='unavailable' href="#">Friends</a></li>
-                    <li><a class='unavailable' href="#">Videogame Moments</a></li>
-                    <li><a class='unavailable' href="2024.html">2024 Recap</a></li>
-                    <li><a href="2023.html">2023 Recap</a></li>
-                    <li><a class='unavailable' href="#">Jargon</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ol>
+                <div class="entry"><a class='unavailable' href="#">2025 Recap</a><div class="date">01/19/26</div></div>
+                <div class="entry plain"><a class='unavailable' href="#">Friends</a><div class="date">01/19/26</div></div>
+                <div class="entry"><a class='unavailable' href="#">Videogame Moments</a><div class="date">01/19/26</div></div>
+                <div class="entry plain"><a class='unavailable' href="#">2024 Recap</a><div class="date">01/19/26</div></div>
+                <div class="entry"><a href="/2023">2023 Recap</a><div class="date">01/19/26</div></div>
+                <div class="entry plain"><a class='unavailable' href="#">Jargon</a><div class="date">01/19/26</div></div>
+                <div class="entry"><a href="/blog">Blog</a><div class="date">01/19/26</div></div>
             </div>
             <div class="wrapper-hex">
                 <div class="hex">
-                    <img src="transparency.gif" style="width:169px;height:169px;">
+                    <img src="./img/transparency.gif" style="width:169px;height:169px;">
                 </div>
             </div>
         </div>
