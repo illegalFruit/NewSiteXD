@@ -43,12 +43,16 @@
                 display: flex;
                 justify-content: center; /* Centers horizontally */
                 align-items: center;     /* Centers vertically */
-                height: 100vh;
+                min-height: 100vh;
+            }
+            .vbox{
+                display: flex;
+                flex-direction: column; 
             }
             .content{
                 background-color: linen;
                 border: 03px double red;
-                width: 690px;
+                width: 800px;
                 height: 690px;
                 overflow:auto;
             }
@@ -80,10 +84,6 @@
             .updated {
                 font-family: 'clearsans-italic';
                 color: rgba(0, 0, 0, 0.5);
-            }
-            .vbox{
-                display: flex;
-                flex-direction: column; 
             }
             .hbox{
                 display: flex;
